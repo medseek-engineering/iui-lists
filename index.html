@@ -4,12 +4,73 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.13/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title></title>
+    <title>iui-lists</title>
 
     <!-- Bootstrap -->
     <link href="lib/dist/iui-lists.css" rel="stylesheet">
+    
+    <script>
+      var app = angular.module('app', ['iui.lists']);
+      app.ng = {
+        requires: []
+      };
+      app.root = '/';
+      app.constant('_', window._);
+      app.controller('listTestController', [function() {
+        var listTest = this;
+        listTest.taskDisplayFields = [
+          {
+            displayName: 'Name',
+            field: 'name'
+          },
+          {
+            displayName: 'Due',
+            field: 'due',
+          },
+          {
+            displayName: 'Status',
+            field: 'status'
+          },
+          {
+            displayName: 'Assigned',
+            field: 'assigned'
+          },
 
+        ];
+        listTest.displayColumns = [
+          {
+            field: 'codeName',
+            displayName: 'Code Name',
+            columnClass: 'code-name-custom-class',
+            visible: true
+          },
+          {
+            field: 'name',
+            displayName: 'Real Name',
+            columnClass: 'code-name-custom-class',
+            visible: false
+          },
+          {
+            field: 'agency',
+            displayName: 'Agency',
+            columnClass: 'agencyCustomClass',
+            visible: true
+          }
+        ];
+        listTest.taskDetail = {
+          name: 'Task 2',
+          id: 2,
+          status: 'Completed',
+          type: 'Basic',
+          due: '2016-01-26T06:00:00',
+          assigned: ''
+        };
+      }]);
+    </script>
+    <script src="lib/dist/iui-lists.min.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -17,7 +78,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body ng-app="app" ng-controller="listTestController as listTest">
+    <div class="container-fluid">
+      <iui-key-value
+        list-item-class-name="dl-horizontal dt-as-left-aligned micro-list"
+        display-fields="listTest.taskDisplayFields"
+        field-data="listTest.taskDetail">
+      </iui-key-value>
+      <h1>Hello, world!</h1>
+    </div>
   </body>
 </html>
