@@ -1,0 +1,21 @@
+<div 
+  class="iui-key-value"
+  role="{{presentationRoleOnly ? 'presentation' : 'list'}}">
+  <dl  
+    ng-repeat="displayField in displayFields track by displayField.field"
+    ng-class="displayField.field ? 'key-value-'+displayField.field : ''"
+    class="key-value {{displayField.className}} {{listItemClassName}}"
+    role="{{presentationRoleOnly ? 'presentation' : 'list-item'}}">
+    <dt
+      role="presentation"
+      ng-class="{'sr-only': displayField.hideFieldName }"
+      class="key-value-field {{displayField.fieldClassName}}"
+      ng-include="displayField.fieldTemplateUrl ? displayField.fieldTemplateUrl : keyValueSettings.fieldDefaultTemplate">
+    </dt>
+    <dd 
+      role="presentation"
+      class="key-value-value {{displayField.valueClassName}}"
+      ng-include="displayField.valueTemplateUrl ? displayField.valueTemplateUrl : keyValueSettings.valueDefaultTemplate">
+    </dd>
+  </dl>
+</div>
