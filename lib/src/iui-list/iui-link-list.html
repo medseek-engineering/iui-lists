@@ -1,0 +1,12 @@
+<iui-list>
+  <iui-list-item ng-repeat="linkItem in listData">
+    <iui-list-item-link ng-href="{{linkPrefix}}{{linkItem[linkIndexProperty]}}{{linkPostfix}}">
+      <iui-key-value
+        class="row"
+        presentation-role-only="true"
+        display-fields="displayFields"
+        field-data="linkItem">
+      </iui-key-value>
+    </iui-list-item-link>
+  </iui-list-item>
+</iui-list>
