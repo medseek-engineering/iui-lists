@@ -1,0 +1,12 @@
+.iui-key-value {
+  @extend dl;
+  > .key-value {
+    margin-bottom: 0;
+  }
+}
+
+.key-value-value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

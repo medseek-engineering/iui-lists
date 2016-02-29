@@ -5,7 +5,7 @@
     ng-repeat="displayField in displayFields track by displayField.field"
     ng-class="displayField.field ? 'key-value-'+displayField.field : ''"
     class="key-value {{displayField.className}} {{listItemClassName}}"
-    role="{{presentationRoleOnly ? 'presentation' : 'list-item'}}">
+    role="{{presentationRoleOnly ? 'presentation' : 'listitem'}}">
     <dt
       role="presentation"
       ng-class="{'sr-only': displayField.hideFieldName }"
