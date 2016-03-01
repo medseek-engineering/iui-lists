@@ -1,6 +1,6 @@
 {
   "name": "iui-lists",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular list directives",
   "main": "./lib/index.js",
   "private": false,
@@ -19,6 +19,7 @@
     "url": "https://github.com/medseek-engineering/iui-lists/issues"
   },
   "dependencies": {
+    "gulp-bump": "^1.0.0",
     "lodash": "^2.4.1"
   },
   "devDependencies": {
@@ -73,10 +74,21 @@
       "require": []
     },
     "appFiles": {
-      "styles": ["./lib/src/**/*.scss", "./lib/src/*.scss"],
-      "htmlFiles": ["./lib/src/**/*.html", "./lib/src/**/*.js"],
-      "jsFiles": ["./lib/src/**/*.js", "./lib/src/*.js"],
-      "templateFiles": ["./lib/src/**/*.html"]
+      "styles": [
+        "./lib/src/**/*.scss",
+        "./lib/src/*.scss"
+      ],
+      "htmlFiles": [
+        "./lib/src/**/*.html",
+        "./lib/src/**/*.js"
+      ],
+      "jsFiles": [
+        "./lib/src/**/*.js",
+        "./lib/src/*.js"
+      ],
+      "templateFiles": [
+        "./lib/src/**/*.html"
+      ]
     },
     "destination": {
       "css": "./lib/dist",
