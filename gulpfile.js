@@ -127,7 +127,7 @@
 
   gulp.task('build', ['lint', 'test', 'createTemplates', 'combineFiles', 'compileStyle']);
 
-  gulp.task('publish', ['lint', 'test', 'createTemplates', 'combineFiles', 'compileStyle', 'bump'])
+  gulp.task('publish', ['lint', 'test', 'createTemplates', 'combineFiles', 'compileStyle', 'bump']);
 
   gulp.task('default', ['serve']);
 
