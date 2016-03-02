@@ -8,6 +8,7 @@
   var compass = require('gulp-compass');
   var karma = require('karma').server;
   var jshint = require('gulp-jshint');
+  var bump = require('gulp-bump');
   var browserSync = require('browser-sync').create();
   var ngHtml2Js = require('gulp-ng-html2js');
   var fs = require('fs');
@@ -95,6 +96,13 @@
       .pipe(browserSync.stream());
   });
 
+  // Will patch the version 
+  gulp.task('bump', function(){
+    gulp.src('./package.json')
+      .pipe(bump())
+      .pipe(gulp.dest('./'));
+  });
+
   gulp.task('nodemon', function (cb) {
     var called = false;
     return nodemon({script: packageJson.main}).on('start', function () {
@@ -118,6 +126,8 @@
   });
 
   gulp.task('build', ['lint', 'test', 'createTemplates', 'combineFiles', 'compileStyle']);
+
+  gulp.task('publish', ['lint', 'test', 'createTemplates', 'combineFiles', 'compileStyle', 'bump']);
 
   gulp.task('default', ['serve']);
 

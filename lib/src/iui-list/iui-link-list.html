@@ -1,0 +1,16 @@
+<iui-list>
+  <iui-list-item ng-repeat="linkItem in listData track by linkItem[linkIndexProperty]">
+    <iui-list-item-link ng-href="{{linkPrefix}}{{linkItem[linkIndexProperty]}}{{linkPostfix}}">
+      <svg class="icon icon-arrow-right">
+        <use xlink:href="#icon-arrow-right" />
+      </svg>
+      <iui-key-value
+        class="{{keyValueClass}} clearfix"
+        presentation-role-only="true"
+        display-fields="displayFields"
+        field-data="linkItem">
+      </iui-key-value>
+    </iui-list-item-link>
+  </iui-list-item>
+</iui-list>
+<div ng-include="'/$iui-lists/icons/symbol-defs.html'"></div>
