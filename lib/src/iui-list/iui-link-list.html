@@ -1,6 +1,6 @@
-<iui-list>
-  <iui-list-item ng-repeat="linkItem in listData track by linkItem[linkIndexProperty]">
-    <iui-list-item-link ng-href="{{linkPrefix}}{{linkItem[linkIndexProperty]}}{{linkPostfix}}">
+<iui-list class="list-group list-group-tight">
+  <iui-list-item class="list-group-item" ng-repeat="linkItem in listData track by linkItem[linkIndexProperty]">
+    <iui-list-item-link class="list-group-item-link" add-class-to-parent="list-group-item-complex list-group-menu-item" ng-href="{{linkPrefix}}{{linkItem[linkIndexProperty]}}{{linkPostfix}}">
       <svg class="icon icon-arrow-right">
         <use xlink:href="#icon-arrow-right" />
       </svg>
