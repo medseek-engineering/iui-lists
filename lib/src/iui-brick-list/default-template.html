@@ -1,0 +1,11 @@
+<span
+  role="presentation"
+  ng-class="{'sr-only': !brick.displayName || brick.hideFieldName }"
+  class="brick-field {{brick.fieldClassName}}">
+  {{ brick.displayName }}
+</span>
+<span 
+  role="presentation"
+  class="brick-value {{brick.valueClassName}}">
+  {{ fieldData[brick.field] }}
+</span>

@@ -1,0 +1,12 @@
+<ul 
+  class="iui-brick-list"
+  role="{{presentationRoleOnly ? 'presentation' : 'list'}}">
+  <li  
+    ng-repeat="brick in displayFields track by brick.field"
+    ng-if="fieldData[brick.field]"
+    ng-class="brick.field ? 'brick-'+brick.field : ''"
+    class="brick {{listItemClassName}}"
+    role="{{presentationRoleOnly ? 'presentation' : 'listitem'}}"
+    ng-include="brick.templateUrl ? brick.templateUrl : brickListSettings.defaultTemplateUrl">
+  </li>
+</ul>

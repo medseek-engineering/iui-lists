@@ -24,3 +24,7 @@ config/*.local.*
 
 *.map
 newrelic.js
+
+Gemfile
+
+Gemfile.lock
