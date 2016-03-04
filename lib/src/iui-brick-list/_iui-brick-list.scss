@@ -1,0 +1,23 @@
+.iui-brick-list {
+  @extend .list-unstyled;
+  > li {
+    background-color: white;
+    border: 1px solid $sg_light_highlight;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    > .brick-field:after {
+      content: ':';
+      margin-left: -3px;
+    }
+  }
+  .remove-brick-btn {
+    @extend .no-btn;
+    @include transition(color 100ms linear);
+    padding-left: 5px;
+    &:hover {
+      color: $sg_dark_grey;
+    }
+  }
+}
