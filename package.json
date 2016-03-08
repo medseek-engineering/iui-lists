@@ -1,6 +1,6 @@
 {
   "name": "iui-lists",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Angular list directives",
   "main": "./lib/index.js",
   "private": false,
@@ -54,7 +54,7 @@
     "ui-core": "git+ssh://git@github.com:medseek-engineering/ui-core.git",
     "medseek-config": "git+ssh://git@github.com:medseek-engineering/medseek-config.git"
   },
-  "gulpSettings": {
+  "buildSettings": {
     "base": "./app/",
     "styleModules": [
       "iui-general"
