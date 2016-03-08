@@ -54,7 +54,7 @@
     "ui-core": "git+ssh://git@github.com:medseek-engineering/ui-core.git",
     "medseek-config": "git+ssh://git@github.com:medseek-engineering/medseek-config.git"
   },
-  "gulpSettings": {
+  "buildSettings": {
     "base": "./app/",
     "styleModules": [
       "iui-general"
