@@ -5,5 +5,8 @@
 
 ## Changelog
 
+### 1.0.4
+- brick list now allows for building nested object (MONA-91)
+
 ### 1.0.3
 - added brick list (MONA-82)

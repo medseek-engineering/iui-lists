@@ -1,14 +1,14 @@
 <div
   role="presentation"
-  ng-class="{'sr-only': !brick.displayName || brick.hideFieldName }"
+  ng-class="{'sr-only': !brick.categoryName || brick.hideFieldName }"
   class="brick-field {{brick.fieldClassName}}">
-  {{ brick.displayName }}
+  {{ brick.categoryName }}
 </div>
 <div 
   role="presentation"
   ng-if="!brick.displayFields.length"
   class="brick-value brick-value-single {{brick.valueClassName}}">
-  {{ fieldData[brick.field] }}
+  {{ brick.displayName }}
 </div>
 <iui-brick-list 
   class="brick-value brick-value-multi {{brick.valueClassName}}"
