@@ -5,6 +5,9 @@
 
 ## Changelog
 
+### 1.0.5
+- Performance improvements for apps using `conf.client.head.addlPathedScripts`
+
 ### 1.0.4
 - brick list now allows for building nested object (MONA-91)
 
