@@ -5,6 +5,10 @@
 
 ## Changelog
 
+### 1.0.6
+- allow ng-class expression to be passed into directive
+
+
 ### 1.0.5
 - Performance improvements for apps using `conf.client.head.addlPathedScripts`
 
